@@ -47,6 +47,7 @@ public class ManTest {
         ObjectMapper mapper = new ObjectMapper();
         List ttt = mapper.readValue(ddd, List.class);
 
+//        이걸하는 이유는 JACKSON 에서 콜렉션의 generic 이 안먹는다. ㅡㅡ; 타입래퍼런스라는 객체를 만들어서 넘기는 방법도 있는데.. 이러면 SUBTYPE 맵핑이 안먹으
         List<Man> mans = new LinkedList<>();
         for (Object t : ttt) {
 
